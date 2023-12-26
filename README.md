@@ -21,7 +21,7 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - moments
 
 - **Arguments**
-  - numpy
+  - **a_standard**     newly designed test statistic to be tested.
   - pandas
   - shap
 
