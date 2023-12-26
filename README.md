@@ -9,6 +9,10 @@ In genetic studies, permutation tests serve as a cornerstone to estimate P-value
 ## kernelSmoothedPerm function
 We have developed an R function, kernelSmoothedPerm, to perform extreme P-value estuimation of a test statistic without a closed-form distribution. 
 
+- **Required R packages**
+  - utilities
+  - MASS
+  - moments
 
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
