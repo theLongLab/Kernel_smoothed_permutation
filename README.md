@@ -3,6 +3,8 @@ Kernel-smoothed permutation is a method that constructs the null distribution of
 
 ## Overview
 
+![My Image](Fig1.png)
+
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
 Quan Long: quan.long@ucalgary.ca
