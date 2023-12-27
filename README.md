@@ -21,8 +21,8 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
 
 - **Arguments**
   - **a_standard:** the newly designed test statistic to be tested.
-  - **a:** vector of permuted test statistics, for P-value accuracy, we recommend a number larger than 1.1e+07 for accuracy threshold at 1e-07 and a number larger than 1.1e+08 for 
-           accuracy threshold at 1e-08.
+  - **a:** vector of permuted test statistics. We recommend a number larger than 1.1e+07 for P-value accuracy threshold at 1e-07 and a number larger than 1.1e+08 
+           for P-value accuracy threshold at 1e-08.
   - **pvalue_threshold:** P-value accuracy threshold. Allowed values are 1e-07 and 1e-08.
 
 - **Value**
