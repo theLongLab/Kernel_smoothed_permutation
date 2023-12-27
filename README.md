@@ -18,13 +18,16 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - moments
 
 - **Arguments**
-  - **a_standard:** newly designed test statistic to be tested.
+  - **a_standard:** the newly designed test statistic to be tested.
   - **a:** vector of permuted test statistics, for P-value accuracy, we recommend a number larger than 1.1e+07 for accuracy threshold at 1e-07 and a number larger than 1.1e+08 for 
            accuracy threshold at 1e-08.
   - **pvalue_threshold:** P-value accuracy threshold. Allowed values are 1e-07 and 1e-08.
 
 - **Value**
-  - P-value estimation of the newly designed test statistic for naive permutation or kernel-smoothed permutation.
+  - **optimal_lambda:** optimal power transformation of permuted test statistics. If "none", then there is no need to perform the transformation; if 0, then perform the log 
+                        transformation; if any other real value, then perform the power transformation as a^(optimal_lambda-1)/optimal_lambda.
+  - **pvalue_naive:** P-value estimation of the newly designed test statistic for naive permutation.
+  - **pvalue_kernel:** P-value estimation of the newly designed test statistic for kernel-smoothed permutation.
 
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
