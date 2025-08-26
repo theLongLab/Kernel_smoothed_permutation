@@ -30,6 +30,9 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
                         transformation; if any other real value, then perform the power transformation as a^(optimal_lambda-1)/optimal_lambda.
   - **pvalue_naive:** P-value estimation for naive permutation.
   - **pvalue_kernel:** P-value estimation for kernel-smoothed permutation.
+ 
+- **Steps**
+  - **1:** Calculate P-value estimation for naive permutation.
 
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
