@@ -4,7 +4,7 @@ Kernel-smoothed permutation is a method that constructs the null distribution of
 ## Overview
 In genetic studies, permutation tests serve as a cornerstone to estimate P-values. This is because researchers may design new test statistics without a known closed-form distribution, or the assumption of a well-established test may not hold. However, permutation tests require vast number of permutations which is proportional to the magnitude of the actual P-values. When it comes to genome-wide association studies where multiple-test corrections are routinely conducted, the actual P-values are extremely small, requiring a daunting number of permutations that may be beyond the available computational resources. Existing models that reduce the required number of permutations all assume a specific format of the test statistic to exploit its specific statistical properties. We propose Kernel-smoothed permutation which is a model-free method universally applicable to any statistic. Our tool forms the null distribution of test statistics using a kurtosis-driven transformation, followed by a kernel-based density estimation (KDE). We compared our Kernel-smoothed permutation to Naïve permutation using statistics from known closed-form null distributions. Based on three frequently used test statistics in association studies, i.e., t-test, sequence kernel association test (SKAT), and chi-squared test, we demonstrated that our model reduced the required number of permutations by a magnitude with the same or higher accuracy.   
 
-![My Image](Fig1.png)
+![My Image](Figure 1.png)
 
 ## kernelSmoothedPerm function
 We have developed an R function, kernelSmoothedPerm, to perform extreme P-value estimation of a test statistic without a closed-form distribution. 
