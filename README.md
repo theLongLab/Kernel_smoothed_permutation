@@ -34,6 +34,9 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
 - **Steps**
   - **1:** Calculate P-value estimation for naive permutation.
   - **2:** Check kurtosis of permuted test statistics. If it is very close to 3, then there is no need to perform the transformation.
+  - **3:** Apply Box-Cox transformation test on permuted test statistics. Data need be normalized if there are negative values.
+  - **4:** Find the optimal power and transform the data.
+  - **5:** Calculate P-value estimation for kernel-smoothed permutation.
 
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
