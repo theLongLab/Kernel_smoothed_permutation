@@ -28,8 +28,8 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
 - **Values**
   - **optimal_lambda:** optimal lambda for power transformation of permuted test statistics. If "none", then there is no need to perform the transformation; if 0, then perform the log 
                         transformation; if any other real value, then perform the power transformation as a^(optimal_lambda-1)/optimal_lambda.
-  - **pvalue_naive:** P-value estimation of the newly designed test statistic for naive permutation.
-  - **pvalue_kernel:** P-value estimation of the newly designed test statistic for kernel-smoothed permutation.
+  - **pvalue_naive:** P-value estimation for naive permutation.
+  - **pvalue_kernel:** P-value estimation for kernel-smoothed permutation.
 
 ## Contacts
 Jiayi Bian: jiayi.bian@ucalgary.ca  
