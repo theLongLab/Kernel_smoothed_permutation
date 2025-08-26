@@ -43,7 +43,7 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
     }
   }
   
-  ### 4. apply KDE based on P-value accuracy threshold, need to change 50???
+  ### 4. apply KDE based on P-value accuracy threshold
   if(pvalue_threshold == 1e-07){
     pvalue_test = numeric(0)
     for (j in 1:50){
@@ -67,5 +67,3 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
   newlist = list(optimal_lambda = lambda_X_optinal, pvalue_naive = pvalue_naive, pvalue_kernel = pvalue_kernel)
   return(newlist)
 }
-
-
