@@ -3,7 +3,7 @@ library(utilities)
 library(MASS)
 library(moments)
 
-kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
+kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold, sim_time = 50){
   ### 0. P-value estimation for naive permutation
   pvalue_naive = sum(X >= X_standard)/length(X)
   
@@ -46,7 +46,7 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
   ### 4. apply KDE based on P-value accuracy threshold
   if(pvalue_threshold == 1e-07){
     pvalue_test = numeric(0)
-    for (j in 1:50){
+    for (j in 1:sim_time){
       X_trans_test = sample(X_trans,1e+07,replace = F)
       MY_KDE = KDE(X_trans_test,bandwidth = 5*bw.nrd0(X_trans_test),to.environment = T)
       pvalue_test[j] = pkde(X_standard_trans,lower.tail = F)
@@ -56,7 +56,7 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
   
   if(pvalue_threshold == 1e-08){
     pvalue_test = numeric(0)
-    for (j in 1:50){
+    for (j in 1:sim_time){
       X_trans_test = sample(X_trans,1e+08,replace = F)
       MY_KDE = KDE(X_trans_test,bandwidth = 7*bw.nrd0(X_trans_test),to.environment = T)
       pvalue_test[j] = pkde(X_standard_trans,lower.tail = F)
@@ -67,3 +67,4 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold){
   newlist = list(optimal_lambda = lambda_X_optinal, pvalue_naive = pvalue_naive, pvalue_kernel = pvalue_kernel)
   return(newlist)
 }
+
