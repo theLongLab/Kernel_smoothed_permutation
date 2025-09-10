@@ -15,11 +15,11 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - kernelSmoothedPerm(X_standard, X, pvalue_threshold, sim_time = 50)
 
 - **Required R packages**
-  - utilities
+  - utilities\
     For installation, please use:\
     install.packages("remotes") # lightweight helper\
     remotes::install_github("ben-oneill/utilities")\
-    library(utilities)\
+    library(utilities)
   - MASS
   - moments
 
