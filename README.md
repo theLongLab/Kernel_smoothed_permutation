@@ -15,13 +15,13 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - kernelSmoothedPerm(X_standard, X, pvalue_threshold, sim_time = 50)
 
 - **Required R packages**
-  - utilities\
+  - `utilities`\
     The `utilities` package in R, as distinct from the base `utils` package, was removed from the CRAN repository on November 14, 2023. Therefore, you cannot directly install the      utilities package using install.packages("utilities") from CRAN anymore. For installation, please use:\
     install.packages("remotes") # lightweight helper\
     remotes::install_github("ben-oneill/utilities")\
     library(utilities)
-  - MASS
-  - moments
+  - `MASS`
+  - `moments`
 
 - **Arguments**
   - **X_standard:** test statistic to be tested before performing permutation.
