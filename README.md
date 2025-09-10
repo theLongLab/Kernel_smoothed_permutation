@@ -12,7 +12,7 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
 `kernelSmoothedPerm.R`
 
 - **Usage**
-  - kernelSmoothedPerm(X_standard, X, pvalue_threshold)
+  - kernelSmoothedPerm(X_standard, X, pvalue_threshold, sim_time = 50)
 
 - **Required R packages**
   - utilities
@@ -24,6 +24,7 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - **X:** vector of permuted test statistics. We recommend a number larger than 1.1e+07 for P-value accuracy threshold at 1e-07 and a number larger than 1.1e+08 
            for P-value accuracy threshold at 1e-08.
   - **pvalue_threshold:** P-value accuracy threshold. Allowed values are 1e-07 and 1e-08.
+  - **sim_time:** Repeat time, default is 50.
 
 - **Values**
   - **optimal_lambda:** optimal lambda for power transformation of permuted test statistics. If "none", then there is no need to perform the transformation; if 0, then perform the log 
