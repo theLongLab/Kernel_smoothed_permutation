@@ -48,7 +48,7 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
 ## Example
 ```
 ##### Example of kernelSmoothedPerm function
-setwd('your_folder_path')
+setwd("your_folder_path")
 source("kernelSmoothedPerm.R")
 X_perm <- read.table("X_perm.txt", sep = "\t")
 X_perm <- X_perm$V1
