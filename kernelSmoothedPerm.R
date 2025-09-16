@@ -19,8 +19,11 @@ kernelSmoothedPerm <- function(X_standard, X, pvalue_threshold, sim_time = 50){
       X = (X-min(X))/(max(X)-min(X))
       X[which(X == 0)] = 1e-05
     }
-    cox_X = boxcox(lm(X ~ 1),plotit = F)
-    lambda_X = cox_X$x[which.max(cox_X$y)]
+    
+    dat  <- data.frame(y = as.numeric(X))
+    fit  <- stats::lm(y ~ 1, data = dat, x = TRUE, y = TRUE, model = TRUE)
+    cox_X <- MASS::boxcox(fit, plotit = FALSE)
+    lambda_X <- cox_X$x[which.max(cox_X$y)]
     
     ### 3. find the optimal power and transform the data
     ## 3.1 if optimal power = 0, then perform log transformation
