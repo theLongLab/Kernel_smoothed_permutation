@@ -45,9 +45,34 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - **4:** Find the optimal power and transform the data.
   - **5:** Calculate P-value estimation for kernel-smoothed permutation.
 
+## Example
+```
+##### Example of kernelSmoothedPerm function
+setwd('your_folder_path')
+source("kernelSmoothedPerm.R")
+X_perm <- read.table("X_perm.txt", sep = "\t")
+X_perm <- X_perm$V1
+summary(X_perm)
+
+X_standard <- 28.80
+
+results <- kernelSmoothedPerm(X_standard = X_standard, X = X_perm, pvalue_threshold = 1e-07, sim_time = 10)
+
+print(results)
+# $optimal_lambda
+# [1] 0.44
+# 
+# $pvalue_naive
+# [1] 9.090909e-07
+# 
+# $pvalue_kernel
+# [1] 8.791662e-07
+```
+
 ## Contacts
-Jiayi Bian: jiayi.bian@ucalgary.ca  
-Quan Long: quan.long@ucalgary.ca
+Jiayi Bian: jiayi.bian@ucalgary.ca \
+Caifeng Li: caifeng.li@ucalgary.ca \
+Quan Long: quan.long@ucalgary.ca 
 
 ## Copyright License (MIT Open Source)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
