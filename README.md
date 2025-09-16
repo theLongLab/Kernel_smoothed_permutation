@@ -46,6 +46,7 @@ We have developed an R function, kernelSmoothedPerm, to perform extreme P-value 
   - **5:** Calculate P-value estimation for kernel-smoothed permutation.
 
 ## Example
+You can find `X_perm.txt` in this link: https://drive.google.com/drive/folders/1poCWOa_KN3DAseXAPTeWqSos8Ly9NcEz?usp=drive_link.
 ```
 ##### Example of kernelSmoothedPerm function
 setwd("your_folder_path")
